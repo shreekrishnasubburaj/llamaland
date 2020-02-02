@@ -4,6 +4,12 @@
  	once: false
  });
 
+ var myAudio = document.getElementById('audio');
+ 
+ function togglePlay(){
+	 return myAudio.paused ? myAudio.play() : myAudio.pause();
+ }
+
 jQuery(document).ready(function($) {
 
 	"use strict";
@@ -12,7 +18,8 @@ jQuery(document).ready(function($) {
 	$(".loader").delay(1000).fadeOut("slow");
   $("#overlayer").delay(1000).fadeOut("slow");	
   
-
+	
+	
 	var siteMenuClone = function() {
 
 		$('.js-clone-nav').each(function() {
